@@ -274,7 +274,7 @@
                         line-height: 28px;
 
                         &:last-child {
-                            color: rgba(255, 255, 255, 0.60);
+                            color: #ffffff99;
                             font: 450 14px Futura PT;
                             line-height: 16px;
                         }
@@ -297,7 +297,7 @@
 
     display: flex;
     justify-content: space-between;
-    background: var(--main-deep-blue-1-e-1231, #1E1231);
+    background: #1E1231;
 
     .navFooter {
         height: 66px;
@@ -402,5 +402,339 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .page {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: -1;
+
+        .wrapperImgFly {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 500;
+            gap: 10px;
+
+            .img1 {
+                background-image: url(../../assets/Line_Vertical_1.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100px;
+                height: 1000px;
+                transform: rotate(90deg);
+                animation: none;
+                // position: absolute;
+                // left: -500px;
+                // bottom: 50px;
+            }
+
+            .img2 {
+                background-image: url(../../assets/Line_Vertical_2.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100px;
+                height: 1000px;
+                transform: rotate(90deg);
+                animation: none;
+                // position: absolute;
+                // left: -500px;
+                // bottom: 50px;
+            }
+
+            .img3 {
+                background-image: url(../../assets/Line_Vertical_3.png);
+                background-repeat: no-repeat;
+                transform: rotate(90deg);
+                width: 100px;
+                height: 1000px;
+                background-size: contain;
+                animation: none;
+                // position: absolute;
+                // left: -500px;
+                // bottom: 50px;
+            }
+
+
+            // @keyframes moveItem {
+            //     0% {
+            //         transform: translateY(0);
+            //     }
+
+            //     100% {
+            //         transform: translateY(4%);
+            //     }
+
+            // }
+
+            // @keyframes moveItem2 {
+            //     0% {
+            //         transform: translateY(0);
+            //     }
+
+            //     100% {
+            //         transform: translateY(-6%);
+            //     }
+            // }
+        }
+
+
+        .header {
+            padding: 10px 14px;
+            border-radius: 64px;
+            border: 2px solid #478BF9;
+            background: #110A1D;
+            gap: 8px;
+            width: 100vh;
+
+            .nav {
+                display: none;
+            }
+
+            .btnWrapper {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+
+                .lenguage {
+                    cursor: pointer;
+                    padding: 8px;
+                    width: 100%;
+
+                    border-radius: 24px;
+                    border: 2px solid var #9DADF2;
+
+                    .imgLeng {
+                        background-image: url('../../assets/Icon\ -\ Planet.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .langv {
+                        display: none;
+                    }
+                }
+
+                .btn {
+                    display: none;
+                }
+            }
+        }
+
+        .main {
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 250px;
+            width: 100vh;
+            padding: 10px 14px;
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 12px;
+
+                h1 {
+                    color: #FFF;
+                    text-align: center;
+                    font: 500 100px Lexend;
+                    line-height: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    span:last-child {
+                        color: #478BF9;
+                    }
+                }
+
+                p {
+                    color: #ffffff99;
+                    font: 500 40px Lexend;
+                    text-align: center;
+                }
+
+                .btnTitle {
+                    margin-top: 25px;
+                    text-align: center;
+
+                    p {
+                        border-radius: 48px;
+                        text-align: center;
+                        padding: 5px 20px;
+                        font: 600 18px Lexend;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .blog {
+                .blogBorder {
+                    border-radius: 50px;
+                    border: 2px solid #478BF9;
+                    background: #ffffff1f;
+                    padding-right: 10px;
+                    width: auto;
+                    height: 550px;
+
+                    .blogWrapper {
+                        margin: 0;
+                        border-radius: 50px;
+                        height: 546px;
+
+                        padding: 10px 16px 10px 16px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        overflow-y: scroll;
+
+                        .infoBlog {
+                            border-radius: 60px;
+                            background: #1E1231;
+                            padding: 20px 50px;
+                            transition: 0.5s;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            gap: 10px;
+
+                            &:hover {
+                                background: #478BF9;
+                                cursor: pointer;
+                            }
+
+                            p {
+                                color: #FFF;
+                                font: 400 35px Lexend;
+
+
+                                &:last-child {
+                                    color: #ffffff99;
+                                    font: 450 20px Futura PT;
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100vh;
+            padding: 80px 30px 50px 30px;
+            gap: 15px;
+
+            border-radius: 50px 50px 0px 0px;
+            border-top: 2px solid #478BF9;
+            border-right: 2px solid #478BF9;
+            border-left: 2px solid #478BF9;
+
+            .navFooter {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 5px;
+
+                p {
+                    font: 400 25px Lexend;
+                }
+            }
+
+            .info {
+                margin-top: 80px;
+
+                p {
+                    text-align: left;
+                    font: 400 20px Lexend;
+                }
+
+                .wrapperIcons {
+
+                    .fonIcon {
+                        display: flex;
+                        gap: 15px;
+
+                        .fonIconBlue {
+                            background-image: url(../../assets/fonLogo.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 48px;
+                            height: 48px;
+                            cursor: pointer;
+                            transition: 0.4s;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &:hover {
+                                background-image: url(../../assets/fonLogoNew.png);
+                            }
+
+                            .twit {
+                                background-image: url(../../assets/Twitter.png);
+                            }
+
+                            .face {
+                                background-image: url(../../assets/Facebook.png);
+                            }
+
+                            .inst {
+                                background-image: url(../../assets/Instagram.png);
+                            }
+
+                            .linked {
+                                background-image: url(../../assets/LinkedIn.png);
+                            }
+
+                            .yout {
+                                background-image: url(../../assets/you.svg);
+                            }
+
+                            .tiktok {
+                                background-image: url(../../assets/TikTok.png);
+                            }
+
+                            .telegram {
+                                background-image: url(../../assets/Telegram.png);
+                            }
+
+                            .vk {
+                                background-image: url(../../assets/VK.png);
+                            }
+
+                            .vk,
+                            .telegram,
+                            .tiktok,
+                            .yout,
+                            .linked,
+                            .inst,
+                            .face,
+                            .twit {
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: 24px;
+                                height: 24px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

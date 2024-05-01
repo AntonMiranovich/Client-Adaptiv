@@ -7,7 +7,7 @@ function Home() {
   const [langv, setLangv] = useState('EN')
 
   return (
-    <div>
+    <div className={style.page}>
 
       <div className={style.wrapperImgFly}>
         <div className={style.img1}></div>
@@ -30,7 +30,7 @@ function Home() {
         <div className={style.btnWrapper}>
           <div className={style.lenguage} onClick={() => langv === "EN" ? setLangv('RU') : setLangv('EN')}>
             <div className={style.imgLeng}></div>
-            <p>{langv}</p>
+            <p className={style.langv}>{langv}</p>
           </div>
 
           <div className={style.btn}><p>LOG IN</p></div>
