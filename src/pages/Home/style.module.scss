@@ -422,7 +422,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 651px) {
     .page {
         display: flex;
         flex-direction: column;
@@ -570,7 +570,6 @@
             align-items: center;
             gap: 250px;
             width: 100vh;
-            // padding: 10px 14px;
             position: relative;
             overflow: hidden;
 
@@ -617,6 +616,8 @@
             .wrapperImgFly {
                 display: flex;
                 flex-direction: column;
+                position: absolute;
+                z-index: 5;
                 gap: 10px;
                 left: 0;
                 top: 470px;
