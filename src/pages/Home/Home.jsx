@@ -5,17 +5,10 @@ import { useState } from "react";
 function Home() {
 
   const [langv, setLangv] = useState('EN')
+  const [flag, setFlag] = useState(false)
 
   return (
     <div className={style.page}>
-
-      <div className={style.wrapperImgFly}>
-        <div className={style.img1}></div>
-        <div className={style.img2}></div>
-        <div className={style.img3}></div>
-      </div>
-
-
 
       <div className={style.header}>
         <div className={style.nav}>
@@ -35,10 +28,28 @@ function Home() {
 
           <div className={style.btn}><p>LOG IN</p></div>
           <div className={style.btn}><p>SIGN UP</p></div>
+
+          <div className={style.hamburger_menu} onClick={() => setFlag(!flag)}>
+            <div className={flag ? style.imgBurger2 : style.imgBurger}></div>
+          </div>
         </div>
       </div>
 
+      <div className={flag ? style.burger : style.burgerNon}>
+        <div className={style.burgerInfo}>
+          <div className={style.burgerParagraff}><p>About us</p></div>
+          <div className={style.burgerParagraff}><p>Brands</p></div>
+          <div className={style.burgerParagraff}><p>Commissions</p></div>
+          <div className={style.burgerParagraff}><p>News</p></div>
+          <div className={style.burgerParagraff}><p>Contact us</p></div>
+          <div className={style.burgerParagraff}><p>Careers</p></div>
+        </div>
 
+        <div className={style.burgerButton}>
+          <div className={style.burgerBtn}><p>LOG IN</p></div>
+          <div className={style.burgerBtn}><p>SIGN UP</p></div>
+        </div>
+      </div>
 
 
       <div className={style.main}>
@@ -54,6 +65,12 @@ function Home() {
           <div className={style.btnTitle}>
             <p>BECOME A PARTNER</p>
           </div>
+        </div>
+
+        <div className={style.wrapperImgFly}>
+          <div className={style.img1}></div>
+          <div className={style.img2}></div>
+          <div className={style.img3}></div>
         </div>
 
         <div className={style.blog}>
