@@ -26,12 +26,12 @@ function Home() {
             <p className={style.langv}>{langv}</p>
           </div>
 
-          <div className={style.btn}><p>LOG IN</p></div>
-          <div className={style.btn}><p>SIGN UP</p></div>
-
           <div className={style.hamburger_menu} onClick={() => setFlag(!flag)}>
             <div className={flag ? style.imgBurger2 : style.imgBurger}></div>
           </div>
+
+          <div className={style.btn}><p>LOG IN</p></div>
+          <div className={style.btn}><p>SIGN UP</p></div>
         </div>
       </div>
 
